@@ -7,4 +7,5 @@ variable "aws_region" {
 variable "s3_bucket_name" {
   description = "Nombre del bucket de almacenamiento del inventario"
   type        = string
+  default     = "lab09-almacenamiento-inventario-g05-dev"
 }
