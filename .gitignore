@@ -1,0 +1,22 @@
+# Archivos locales generados por Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Variables locales que pueden contener información sensible
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Credenciales y archivos de entorno
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Archivos temporales del editor
+.vscode/
