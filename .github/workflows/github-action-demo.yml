@@ -1,6 +1,6 @@
 name: Pipeline Inventario AWS
 
-run-name: ${{github.actor}} este ejecutando el Pipeline Inventario AWS del Grupo 05.
+run-name: ${{github.actor}} está ejecutando el Pipeline Inventario AWS del Grupo 05.
 on: 
   push: 
     branches:
@@ -24,7 +24,7 @@ jobs:
           run: |
             echo "Usuario: ${{github.actor}}"
             echo "Rama: ${{github.ref_name}}"
-            echo "Repositorio: ${{github.repositorio}}"
+            echo "Repositorio: ${{github.repository}}"
 
         - name: checkout repository
           uses: actions/checkout@v6
@@ -58,3 +58,13 @@ jobs:
             echo "Rama ejecutada: ${{github.ref_name}}"
             echo "Commit: ${{github.sha}}"
             echo "Profe tengo sueño :("
+
+        - name: Mostrar configuración del proyecto AWS
+          env:
+            REGION: ${{ vars.AWS_REGION}}
+            PROYECTO: ${{ vars.PROJECT_NAME}}
+            BUCKET: ${{ vars.S3_BUCKET_NAME}}
+          run: |
+            echo "Proyecto: $PROYECTO"
+            echo "Region: $REGION"
+            echo "Bucket S3: $BUCKET"
