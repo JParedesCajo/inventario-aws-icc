@@ -1,0 +1,60 @@
+name: Pipeline Inventario AWS
+
+run-name: ${{github.actor}} este ejecutando el Pipeline Inventario AWS del Grupo 05.
+on: 
+  push: 
+    branches:
+      - master
+      - "feat/**"
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs: 
+    validar-sistema-inventario-aws:
+      name: Validación del proyecto - Sprint 01
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Mostrar evento
+          run: echo "Este job ha sido ejecutado ${{github.event_name}}"
+
+        - name: Mostrar informacion del repositorio.
+          run: |
+            echo "Usuario: ${{github.actor}}"
+            echo "Rama: ${{github.ref_name}}"
+            echo "Repositorio: ${{github.repositorio}}"
+
+        - name: checkout repository
+          uses: actions/checkout@v6
+
+        - name: Listar los archivos del repositorio
+          run: ls -la ${{github.workspace }}
+        
+        - name: Verificar la configuración de terraform
+          run: |
+            echo "Revisando versions.tf"
+            echo "Revisando providers.tf"
+            echo "Revisando variables.tf"
+            echo "Revisando main.tf"
+            echo "Region AWS configurada: us-east-1"
+        
+        - name: Verificar VPC principal
+          run: |
+            echo "Recurso Terraform: aws_vpc.inventario"
+            echo "CIDR: 10.0.0.0/16"
+            echo "Nombre: inventario-vpc-dev"
+
+        - name: Verficiar subredes publicas (a - b)
+          run: |
+            echo "Subred publica A: 10.0.1.0/24 - us-east-1a"
+            echo "Subred publica B: 10.0.2.0/24 - us-east-1b"
+            echo "Ambas subredes pertenecen a la VPC principal"
+
+        - name: Finalizar Pipeline
+          run: |
+            echo "Pipeline del Grupo 05 finalizado"
+            echo "Rama ejecutada: ${{github.ref_name}}"
+            echo "Commit: ${{github.sha}}"
+            echo "Profe tengo sueño :("
