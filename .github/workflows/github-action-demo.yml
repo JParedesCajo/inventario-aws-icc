@@ -38,7 +38,7 @@ jobs:
             echo "Revisando providers.tf"
             echo "Revisando variables.tf"
             echo "Revisando main.tf"
-            echo "Region AWS configurada: us-east-1"
+            echo "Region AWS configurada: us-east-2"
         
         - name: Verificar VPC principal
           run: |
@@ -48,8 +48,8 @@ jobs:
 
         - name: Verficiar subredes publicas (a - b)
           run: |
-            echo "Subred publica A: 10.0.1.0/24 - us-east-1a"
-            echo "Subred publica B: 10.0.2.0/24 - us-east-1b"
+            echo "Subred publica A: 10.0.1.0/24 - us-east-2a"
+            echo "Subred publica B: 10.0.2.0/24 - us-east-2b"
             echo "Ambas subredes pertenecen a la VPC principal"
 
         - name: Finalizar Pipeline

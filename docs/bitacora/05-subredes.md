@@ -8,8 +8,8 @@ Implementar mediante Terraform dos subredes públicas distribuidas en diferentes
 
 | Recurso Terraform | CIDR | Zona de disponibilidad |
 |---|---|---|
-| aws_subnet.public_a | 10.0.1.0/24 | us-east-1a |
-| aws_subnet.public_b | 10.0.2.0/24 | us-east-1b |
+| aws_subnet.public_a | 10.0.1.0/24 | us-east-2a |
+| aws_subnet.public_b | 10.0.2.0/24 | us-east-2b |
 
 Ambos recursos están asociados a `aws_vpc.inventario`.
 

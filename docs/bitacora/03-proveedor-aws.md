@@ -37,7 +37,7 @@ También establece las etiquetas:
 
 ### 3.3 variables.tf
 
-Declara la variable `aws_region` de tipo `string`, con el valor predeterminado `us-east-1`.
+Declara la variable `aws_region` de tipo `string`, con el valor predeterminado `us-east-2`.
 
 Esto permite modificar la región sin alterar directamente el archivo del proveedor.
 

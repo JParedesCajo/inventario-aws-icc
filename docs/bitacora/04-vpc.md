@@ -10,7 +10,7 @@ Definir mediante Terraform la red virtual principal de la infraestructura AWS de
 
 **Nombre del recurso:** `inventario-vpc-dev`.
 
-**Región configurada:** `us-east-1`.
+**Región configurada:** `us-east-2`.
 
 **Rango CIDR:** `10.0.0.0/16`.
 
@@ -84,7 +84,7 @@ Sin embargo, los servicios y recursos que se incorporen posteriormente pueden ge
 **Recurso:** `aws_vpc.inventario`  
 **Nombre:** `inventario-vpc-dev`  
 **CIDR:** `10.0.0.0/16`  
-**Región:** `us-east-1`
+**Región:** `us-east-2`
 
 **Estado:** declarado en código; despliegue pendiente.
 

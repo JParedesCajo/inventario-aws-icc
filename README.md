@@ -144,15 +144,15 @@ Se utiliza una convención basada en el tipo de cambio:
 
 - Recurso Terraform: `aws_vpc.inventario`.
 - Nombre: `inventario-vpc-dev`.
-- Región: `us-east-1`.
+- Región: `us-east-2`.
 - CIDR: `10.0.0.0/16`.
 - Soporte DNS habilitado.
 - Nombres de host DNS habilitados.
 
 **Subredes públicas — en desarrollo**
 
-- Subred A: `10.0.1.0/24`, zona `us-east-1a`.
-- Subred B: `10.0.2.0/24`, zona `us-east-1b`.
+- Subred A: `10.0.1.0/24`, zona `us-east-2a`.
+- Subred B: `10.0.2.0/24`, zona `us-east-2b`.
 
 El estado de estas subredes se actualizará después de completar su validación y registrar el avance correspondiente.
 
