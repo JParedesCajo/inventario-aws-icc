@@ -1,4 +1,4 @@
-# Alcance del Laboratorio — Sistema Web de Gestión de Inventario
+# Alcance del Proyecto — Sistema Web de Gestión de Inventario
 
 ## 1. Descripción del proyecto
 
