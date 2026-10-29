@@ -1,0 +1,4 @@
+bucket  = "lab09-inventario-tfstate-g05"
+key     = "lab09/dev/terraform.tfstate"
+region  = "us-east-2"
+encrypt = true

@@ -21,3 +21,8 @@ crash.*.log
 # Archivos de credenciales
 .env
 .env.*
+
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+terraform/backend.hcl
