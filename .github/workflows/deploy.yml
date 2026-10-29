@@ -38,7 +38,7 @@ jobs:
       - name: 3. Instalar HashiCorp Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "1.6.0"
+          terraform_version: "1.9.8"
 
       - name: 4. Inicializar Backend S3 (terraform init)
         run: |
